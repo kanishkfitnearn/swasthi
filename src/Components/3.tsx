@@ -74,7 +74,7 @@ export default function DetailedProgress() {
         </div>
       </div>
 
-      <div className="w-full md:w-[500px] h-auto md:h-[600px] flex flex-col items-center md:mr-11 mt-4 md:mt-0 px-4 md:px-0">
+      <div className="w-full md:w-[500px] h-auto md:h-[600px] flex flex-col items-center md:mr-11 mt-4 md:mt-0 px-4 md:px-0 cursor-pointer">
         <img
           src="/Group 1000005330.png"
           alt="Health Progress Visualization"

@@ -26,7 +26,7 @@ export default function PricingTitle() {
         <img
           src="./Buttons.png"
           alt="trial"
-          className="w-[80%] sm:w-[60%] md:w-[300px] mx-auto"
+          className="w-[80%] sm:w-[60%] md:w-[300px] mx-auto cursor-pointer"
         />
       </div>
     );

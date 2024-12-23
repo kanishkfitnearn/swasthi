@@ -1,5 +1,6 @@
 import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog";
 
+
 const HealthJourney = () => {
   return (
     <section className="bg-black text-white py-12 px-6 sm:px-8 md:px-16">
