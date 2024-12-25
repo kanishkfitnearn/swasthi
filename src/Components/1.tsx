@@ -127,7 +127,7 @@ const HealthJourney = () => {
           </div>
         </div>
 
-        <div className="md:w-1/2 flex items-center justify-center relative">
+        <div className="md:w-1/2 flex items-center justify-center relative animate-floating">
           <div className="relative w-full max-w-lg">
             <div className="w-[100%] h-[100%]">
               <img
@@ -145,13 +145,13 @@ const HealthJourney = () => {
               <img
                 src="/Circle (1).png"
                 alt="Decorative Circle 1"
-                className="absolute w-16 sm:w-20 animate-floating md:w-24 top-[50%] left-[5%] md:left-[5%] transform -translate-y-1/2 z-40"
+                className="absolute w-16 sm:w-20 md:w-24 top-[50%] left-[5%] md:left-[5%] transform -translate-y-1/2 z-40"
               />
 
               <img
                 src="/Circle (2).png"
                 alt="Decorative Circle 2"
-                className="absolute w-16 sm:w-20 animate-floating md:w-24 top-[70%] left-[30%] md:left-[30%] transform -translate-y-1/2 z-40"
+                className="absolute w-16 sm:w-20 md:w-24 top-[70%] left-[30%] md:left-[30%] transform -translate-y-1/2 z-40"
               />
             </div>
           </div>

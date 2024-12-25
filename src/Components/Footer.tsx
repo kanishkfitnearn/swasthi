@@ -5,7 +5,7 @@ import { FaTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-b from-[#2c1c18] to-[#4a322d] text-white py-8">
+    <footer className="bg-custom-gradient text-white py-8">
       <div className=" w-[90%] max-w-7xl mx-auto flex flex-wrap justify-evenly space-y-8 md:space-y-0">
         <div className="w-full md:w-1/2 lg:flex-1 px-4">
           <div className="flex items-center space-x-2">
@@ -107,6 +107,11 @@ const Footer = () => {
             <li>
               <a href="#" className="hover:text-orange-500 text-gray-200">
                 Privacy Policy
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-orange-500 text-gray-200">
+                Data Delition Policy
               </a>
             </li>
           </ul>

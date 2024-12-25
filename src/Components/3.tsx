@@ -1,9 +1,27 @@
+import 'aos/dist/aos.css'; // Import AOS styles
+import { useEffect } from 'react';
+import AOS from 'aos';
+
 export default function DetailedProgress() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in ms
+      once: false, // Ensures animation occurs only once
+    });
+  }, []);
+
   return (
     <div className="flex flex-col md:flex-row justify-between px-4 md:px-10">
-      <div className="w-full md:w-[463px] h-auto md:h-[600px] gap-[24px] ml-0 md:ml-10 px-4 md:px-0">
+      <div
+        className="w-full md:w-[463px] h-auto md:h-[600px] gap-[24px] ml-0 md:ml-10 px-4 md:px-0"
+        data-aos="fade-up"
+      >
         <div className="w-full h-auto md:h-[255px] gap-[12px]">
-          <div className="w-full h-auto md:h-[177px]">
+          <div
+            className="w-full h-auto md:h-[177px]"
+            data-aos="slide-right"
+            data-aos-delay="200"
+          >
             <p className="font-roboto text-[24px] md:text-[40px] font-black leading-[32px] md:leading-[58.59px] text-left text-neutral-100">
               Detailed Progress Tracking with Smart{" "}
               <span
@@ -17,7 +35,11 @@ export default function DetailedProgress() {
               </span>
             </p>
           </div>
-          <div className="w-full md:w-[423px] h-auto my-2">
+          <div
+            className="w-full md:w-[423px] h-auto my-2"
+            data-aos="slide-left"
+            data-aos-delay="400"
+          >
             <p className="text-neutral-300 text-xs md:text-base">
               Stay informed and motivated with Swasthi’s advanced progress
               tracking, offering weekly, monthly, and yearly smart reports for
@@ -26,7 +48,11 @@ export default function DetailedProgress() {
           </div>
         </div>
         <div className="w-full md:w-[423px] h-auto my-5 space-y-4">
-          <div className="w-full h-auto gap-[16px] flex">
+          <div
+            className="w-full h-auto gap-[16px] flex"
+            data-aos="slide-right"
+            data-aos-delay="600"
+          >
             <div className="w-10 md:w-16 my-0.5">
               <img src="/check_circle.png" alt="check_circle" />
             </div>
@@ -41,7 +67,11 @@ export default function DetailedProgress() {
               </p>
             </div>
           </div>
-          <div className="w-full h-auto gap-[16px] flex">
+          <div
+            className="w-full h-auto gap-[16px] flex"
+            data-aos="slide-left"
+            data-aos-delay="800"
+          >
             <div className="w-10 md:w-16 my-0.5">
               <img src="/check_circle.png" alt="check_circle" />
             </div>
@@ -56,7 +86,11 @@ export default function DetailedProgress() {
               </p>
             </div>
           </div>
-          <div className="w-full h-auto gap-[16px] flex">
+          <div
+            className="w-full h-auto gap-[16px] flex"
+            data-aos="slide-right"
+            data-aos-delay="1000"
+          >
             <div className="w-10 md:w-16 my-0.5">
               <img src="/check_circle.png" alt="check_circle" />
             </div>
@@ -73,8 +107,7 @@ export default function DetailedProgress() {
           </div>
         </div>
       </div>
-
-      <div className="w-full md:w-[500px] h-auto md:h-[600px] flex flex-col items-center md:mr-11 mt-4 md:mt-0 px-4 md:px-0 cursor-pointer">
+      <div className="w-full md:w-[500px] h-auto md:h-[600px] flex flex-col items-center md:mr-11 mt-4 md:mt-0 px-4 md:px-0 cursor-pointer animate-floating">
         <img
           src="/Group 1000005330.png"
           alt="Health Progress Visualization"

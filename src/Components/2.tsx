@@ -1,27 +1,52 @@
+import "aos/dist/aos.css"; // Import AOS styles
+import { useEffect, forwardRef } from "react";
+import AOS from "aos";
 
-const FeaturesSection = () => {
+const FeaturesSection = forwardRef((_, ref) => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in ms
+      once: false, // Ensures animation occurs only once
+    });
+  }, []);
+
   return (
-    <section className="bg-black text-white py-16 px-6 sm:px-8">
+    <section
+      ref={ref} // Attach ref to the main section
+      className="bg-black text-white py-16 px-6 sm:px-8"
+    >
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-center text-3xl sm:text-4xl font-bold mb-6 text-neutral-100">
+        <h2
+          className="text-center text-3xl sm:text-4xl font-bold mb-6 text-neutral-100"
+          data-aos="fade-down"
+        >
           Boost Your Health with Swasthi's
           <br />
           <span className="bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
             Essential Features
           </span>
         </h2>
-        <p className="text-center text-sm sm:text-base mb-12 sm:mb-24 text-neutral-300">
+        <p
+          className="text-center text-sm sm:text-base mb-12 sm:mb-24 text-neutral-300"
+          data-aos="fade-up"
+        >
           Explore Swasthi’s powerful tools—from mood and fitness tracking to
           comprehensive health
           <br className="hidden sm:block" /> assessments in multiple languages.
         </p>
 
-        <div className="relative bg-custom-gradient rounded-3xl p-6 sm:p-8">
+        <div
+          className="relative bg-custom-gradient rounded-3xl p-6 sm:p-8"
+          data-aos="fade-up"
+        >
           <div className="relative z-10 flex flex-col md:flex-row items-center md:items-start gap-8">
-             <div className="flex-1 space-y-6">
-              <div className="p-4 sm:p-6 text-center sm:text-right">
+            <div className="flex-1 space-y-6">
+              <div
+                className="p-4 sm:p-6 text-center sm:text-right"
+                data-aos="fade-right"
+              >
                 <div className="flex justify-center sm:justify-end">
-                  <img src="/icon1.png" alt="Mood Tracking Icon" data-aos="fade-right" />
+                  <img src="/icon1.png" alt="Mood Tracking Icon" />
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold text-white mb-2">
                   Mood Tracking
@@ -32,7 +57,10 @@ const FeaturesSection = () => {
                 </p>
               </div>
 
-              <div className="p-4 sm:p-6 text-center sm:text-right">
+              <div
+                className="p-4 sm:p-6 text-center sm:text-right"
+                data-aos="fade-right"
+              >
                 <div className="flex justify-center sm:justify-end">
                   <img src="/icon2.png" alt="Workout Tracking Icon" />
                 </div>
@@ -46,7 +74,10 @@ const FeaturesSection = () => {
               </div>
             </div>
 
-             <div className="flex-shrink-0 relative sm:-top-24">
+            <div
+              className="flex-shrink-0 relative sm:-top-24"
+              data-aos="zoom-in"
+            >
               <div className="shadow-lg rounded-xl overflow-hidden">
                 <img
                   src="/iPhone 15.png"
@@ -56,8 +87,11 @@ const FeaturesSection = () => {
               </div>
             </div>
 
-             <div className="flex-1 space-y-6">
-              <div className="p-4 sm:p-6 text-center sm:text-left">
+            <div className="flex-1 space-y-6">
+              <div
+                className="p-4 sm:p-6 text-center sm:text-left"
+                data-aos="fade-left"
+              >
                 <div className="flex justify-center sm:justify-start">
                   <img src="/icon3.png" alt="Multilingual Icon" />
                 </div>
@@ -70,7 +104,10 @@ const FeaturesSection = () => {
                 </p>
               </div>
 
-              <div className="p-4 sm:p-6 text-center sm:text-left">
+              <div
+                className="p-4 sm:p-6 text-center sm:text-left"
+                data-aos="fade-left"
+              >
                 <div className="flex justify-center sm:justify-start">
                   <img src="/icon4.png" alt="Health Calculators Icon" />
                 </div>
@@ -89,6 +126,6 @@ const FeaturesSection = () => {
       </div>
     </section>
   );
-};
+});
 
 export default FeaturesSection;

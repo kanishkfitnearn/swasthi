@@ -1,8 +1,32 @@
-export default function HowitWorks() {
+import React, { useEffect, useState, forwardRef } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+const HowItWorks = forwardRef<HTMLElement>((_, ref) => {
+  // State to manage video play
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+
+
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: false,    // Ensures animation occurs only once
+    });
+  }, []);
+
+  // Handle image click to play video
+  const handleVideoClick = () => {
+    setIsVideoPlaying(true);
+  };
+
   return (
-    <>
-      <div className="w-[85%] max-w-[1200px] mx-auto rounded-[54px] bg-gradient-to-b from-[#2c1c18] to-[#4a322d] p-10 m-10">
-        <div className="w-full text-center">
+    <section ref={ref}>
+      <div
+        className="w-[87%] max-w-[1200px] mx-auto rounded-[54px] bg-custom-gradient p-10 m-10"
+        data-aos="fade-up"
+      >
+        <div className="w-full text-center" data-aos="fade-down">
           <p className="font-roboto text-[36px] md:text-[48px] font-black text-neutral-200">
             How It Works&nbsp;
             <span
@@ -20,8 +44,14 @@ export default function HowitWorks() {
             simple steps to begin your journey towards a healthier lifestyle!
           </p>
         </div>
-        <div className="w-full flex flex-wrap md:flex-nowrap justify-evenly items-center p-6">
-          <div className="w-full md:w-[300px] space-y-8 text-center md:text-right">
+        <div
+          className="w-full flex flex-wrap md:flex-nowrap justify-evenly items-center p-6"
+          data-aos="fade-up"
+        >
+          <div
+            className="w-full md:w-[300px] space-y-8 text-center md:text-right"
+            data-aos="slide-right"
+          >
             <div className="space-y-4">
               <p className="text-neutral-100 font-roboto text-[16px] md:text-[20px] font-bold">
                 Download App
@@ -52,30 +82,35 @@ export default function HowitWorks() {
               </p>
             </div>
           </div>
-            <div className="m-0 h-full xl:block md:block hidden">
-              <img
-                src="/Rectangle 7.png"
-                alt="rectangle"
-                className="ml-14 mt-0 absolute "
-              />
-              <img
-                src="/Circle1.png"
-                alt="circle1"
-                className="h-[60px] w-[60px] rounded-full relative z-10 ml-7 mt-[60px]"
-              />
-              <img
-                src="/Circle2.png"
-                alt="circle2"
-                className="h-[60px] w-[60px] rounded-full relative z-10 my-[120px] ml-7"
-              />
-              <img
-                src="/Circle3.png"
-                alt="circle3"
-                className="h-[60px] w-[60px] rounded-full relative z-10 mb-[50px] ml-7"
-              />
-            </div>
-
-          <div className="w-full md:w-[300px] space-y-8 text-center md:text-left">
+          <div
+            className="m-0 h-full xl:block md:block hidden"
+            data-aos="zoom-in"
+          >
+            <img
+              src="/Rectangle 7.png"
+              alt="rectangle"
+              className="ml-14 mt-0 absolute "
+            />
+            <img
+              src="/Circle1.png"
+              alt="circle1"
+              className="h-[60px] w-[60px] rounded-full relative z-10 ml-7 mt-[60px]"
+            />
+            <img
+              src="/Circle2.png"
+              alt="circle2"
+              className="h-[60px] w-[60px] rounded-full relative z-10 my-[120px] ml-7"
+            />
+            <img
+              src="/Circle3.png"
+              alt="circle3"
+              className="h-[60px] w-[60px] rounded-full relative z-10 mb-[50px] ml-7"
+            />
+          </div>
+          <div
+            className="w-full md:w-[300px] space-y-8 text-center md:text-left"
+            data-aos="slide-left"
+          >
             <div className="w-full md:w-[300px]">
               <img
                 src="/Frame 2608478.png"
@@ -106,13 +141,32 @@ export default function HowitWorks() {
           </div>
         </div>
       </div>
-      <div className="w-[80%] max-w-[720px] mx-auto">
-        <img
-          src="/Video.png"
-          alt="video_img"
-          className="translate-y-[-60px] cursor-pointer w-full h-auto"
-        />
+      <div
+        className="w-[80%] max-w-[720px] mx-auto animate-floating"
+        data-aos="zoom-out"
+      >
+        {/* Clickable video image */}
+        {!isVideoPlaying ? (
+          <img
+            src="/Video.png"
+            alt="video_img"
+            className="translate-y-[-60px] cursor-pointer w-full h-auto"
+            onClick={handleVideoClick}
+          />
+        ) : (
+          // Display video in place of image when clicked
+          <iframe
+            width="100%"
+            height="400"
+            src="/-034a-434f-ab20-1f24ac408882.mp4"
+            frameBorder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        )}
       </div>
-    </>
+    </section>
   );
-}
+});
+
+export default HowItWorks;
