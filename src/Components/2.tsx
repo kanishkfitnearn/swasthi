@@ -1,8 +1,9 @@
 import "aos/dist/aos.css"; // Import AOS styles
 import { useEffect, forwardRef } from "react";
 import AOS from "aos";
+import { Ref } from "react";
 
-const FeaturesSection = forwardRef((_, ref) => {
+const FeaturesSection = forwardRef<HTMLElement, {}>((_, ref: Ref<HTMLElement>) => {
   useEffect(() => {
     AOS.init({
       duration: 1000, // Animation duration in ms
