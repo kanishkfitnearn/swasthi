@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import Navbar from "./Components/Navbar";
 import HealthJourney from "./Components/1";
 import FeaturesSection from "./Components/2";
