@@ -1,6 +1,5 @@
 import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog";
 
-
 const HealthJourney = () => {
   return (
     <section className="bg-black text-white py-12 px-6 sm:px-8 md:px-16">
@@ -48,14 +47,14 @@ const HealthJourney = () => {
                         />
                       </svg>
                     </span>
-                    <div className="flex flex-col justify-center items-start">
-                      <span className="text-[8px] md:text-[9px] text-white font-bold leading-[13px]">
-                        Download on the
-                      </span>
-                      <span className="text-[18px] md:text-[22px] text-[#F5F5F5] font-bold md:leading-[150%]">
-                        App Store
-                      </span>
-                    </div>
+                    <div className="text-left">
+                        <span className="block text-xs font-bold leading-tight">
+                          Download on the
+                        </span>
+                        <span className="block text-lg font-semibold leading-tight">
+                          App Store
+                        </span>
+                      </div>
                   </span>
                 </button>
               </DialogTrigger>
@@ -102,11 +101,11 @@ const HealthJourney = () => {
                         />
                       </svg>
                     </span>
-                    <div className="flex flex-col justify-center items-start">
-                      <span className="text-[8px] md:text-[9px] text-white font-bold leading-[13px]">
+                    <div className="text-left">
+                      <span className="block text-xs font-bold leading-tight">
                         Get it on
                       </span>
-                      <span className="text-[18px] md:text-[22px] text-[#F5F5F5] font-bold md:leading-[150%]">
+                      <span className="block text-lg font-semibold leading-tight">
                         Google Play
                       </span>
                     </div>

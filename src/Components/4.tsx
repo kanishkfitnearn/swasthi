@@ -32,11 +32,11 @@ export default function Download() {
                           className="w-6 h-6"
                         />
                       </span>
-                      <div className="flex flex-col justify-center items-start">
-                        <span className="text-[8px] md:text-[9px] text-white font-bold leading-[13px]">
+                      <div className="text-left">
+                        <span className="block text-xs font-bold leading-tight">
                           Download on the
                         </span>
-                        <span className="text-[18px] md:text-[22px] text-[#F5F5F5] font-bold md:leading-[150%]">
+                        <span className="block text-lg font-semibold leading-tight">
                           App Store
                         </span>
                       </div>
@@ -67,14 +67,14 @@ export default function Download() {
                           className="w-6 h-6"
                         />
                       </span>
-                      <div className="flex flex-col justify-center items-start">
-                        <span className="text-[8px] md:text-[9px] text-white font-bold leading-[13px]">
-                          Get it on
-                        </span>
-                        <span className="text-[18px] md:text-[22px] text-[#F5F5F5] font-bold md:leading-[150%]">
-                          Google Play
-                        </span>
-                      </div>
+                      <div className="text-left">
+                <span className="block text-xs font-bold leading-tight">
+                  Get it on
+                </span>
+                <span className="block text-lg font-semibold leading-tight">
+                  Google Play
+                </span>
+              </div>
                     </span>
                   </button>
                 </DialogTrigger>
