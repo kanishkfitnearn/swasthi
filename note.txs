@@ -1,0 +1,35 @@
+const obj = 
+{ 
+    heading : "asdfg"
+    description : "sfdfg"
+     image : "image link"
+} 
+
+interface ContentType {
+  heading1: string;
+  heading2: string;  
+  description: string;
+   image: string;
+}
+
+const Data: Content = [
+    {
+        heading1: "Download App",
+        heading2: "",
+        description: "Download Swasthi on your favourite device. Available on both iOS and Android platforms.",
+        image: "Frame 2608478.png",
+    },
+
+    {
+        heading1: "Create Account",
+        heading2: "7 days free trial",
+        description: "Sign up easily using your email or social accounts like Google or Apple. Enjoy a 7-day free trial with full access to all premium features.",
+        image: "Frame 2608479.png",
+    }
+    {
+        heading1: "You're Done",
+        heading2: "Enjoy the Experience",
+        description: "Explore the app's amazing features, track your progress, and share Swasthi with friends and family to inspire their health journey.",
+        image: "Frame 2608479 (1).png",
+    }
+];
